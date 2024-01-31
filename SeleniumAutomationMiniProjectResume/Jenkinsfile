@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Git Clone') { 
             steps {
-                git branch: 'main', credentialsId: 'b032d43a-9ab4-4b05-9e35-b3be11a25d2f', url: 'https://github.com/neerajaggarwal2501/selenium.git'
+                git branch: 'main', credentialsId: 'b032d43a-9ab4-4b05-9e35-b3be11a25d2f', url: 'https://github.com/neerajaggarwal2501/SeleniumAutomationMiniProject_Resume.git'
             }
         }
         stage('execute tests using maven') { 
             steps {
-                bat 'mvn -f 25082023/pom.xml clean test'
+                bat 'mvn -f SeleniumAutomationMiniProjectResume/pom.xml clean test'
             }
         }
         stage('Publish Test Report in Jenkins') { 
             steps {
-                cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/TestReport.json', jsonReportDirectory: '25082023/TestReports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1 
+                cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/TestReport.json', jsonReportDirectory: 'SeleniumAutomationMiniProjectResume/TestReports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1 
             }
         }
     }
