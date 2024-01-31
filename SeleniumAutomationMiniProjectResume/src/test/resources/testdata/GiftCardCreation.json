@@ -1,0 +1,12 @@
+	{
+		"testDataID":"1",
+		"giftCardType": "Physical",
+		"initialValue": "1",
+		"age": 35,
+		"couponCode": "dd",
+		"recipientName":"User002",
+		"recipientEmail":"DummyMail001@dummy.com",
+		"senderName":"User001",
+		"senderEmail":"DummyMail001@dummy.com",
+		"message":"Test Message..."
+	}

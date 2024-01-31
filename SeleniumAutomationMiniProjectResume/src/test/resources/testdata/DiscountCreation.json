@@ -1,0 +1,16 @@
+	{
+		"testDataID":"1",
+		"isActive": "True",
+		"name": "Test Discount 001",
+		"discountType": "Assigned to products",
+		"usePercentage": "False",
+		"discountPercentage": "10",
+		"maximumDiscountAmount":"15",
+		"discountAmount":"1.25",
+		"requiresCouponCode":"True",
+		"startDate":"1/23/2024 09:30 AM",
+		"endDate":"12/31/2024 06:30 PM",
+		"cumulativeWithOtherDiscounts":"True",
+		"discountLimitation": "Unlimited",
+		"adminComment": "Approved"
+	}
