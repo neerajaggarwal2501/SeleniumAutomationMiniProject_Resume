@@ -7,12 +7,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Features/001_DashBoardPage",
+		features = "@TestReports/TestReport_Retry.txt",
 		glue = "stepdefinitions", 
 		dryRun = false, 
 		monochrome = true, 
-		plugin = { "pretty", "html:TestReports\\TestReport.html","json:TestReports\\TestReport.json","rerun:TestReports\\TestReport_Retry.txt" },
+				plugin = { "pretty", "html:TestReports\\RetryTestReport.html","json:TestReports\\RetryTestReport.json"},
 		tags = "@Regression or @Smoke"
 		)
-public class TestRunner_Sample {
+public class TestRunner_Sample_ReRunFailedTests {
 }

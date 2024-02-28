@@ -1,9 +1,12 @@
-package stepdefinitions;
+package stepdefinitions.commonsteps;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import framework.FrameWork;
 import framework.managers.FileReaderManager;
@@ -36,4 +39,21 @@ public class CommonSteps {
 		Assert.assertTrue(actualPageHeader.contains(expectedPageHeader));
 
 	}
+
+	@Then("the title of page is {string}")
+	public void the_title_of_page_is(String expectedTitle) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(fw.getDriverManager().getDriver(), Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.titleIs(expectedTitle));
+		StringBuffer actualTitle = new StringBuffer(fw.getDriverManager().getDriver().getTitle());
+		Assert.assertEquals(expectedTitle, actualTitle.toString());
+	}
+
+	@Then("the url of page is {string}")
+	public void the_url_of_page_is(String expectedURL) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(fw.getDriverManager().getDriver(), Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.urlToBe(expectedURL));
+		StringBuffer actualURL = new StringBuffer(fw.getDriverManager().getDriver().getCurrentUrl());
+		Assert.assertEquals(expectedURL, actualURL.toString());
+	}
+
 }

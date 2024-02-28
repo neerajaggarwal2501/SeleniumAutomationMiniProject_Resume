@@ -22,11 +22,11 @@ public class SampleSteps {
 //		fw.getDriverManager().getDriver().get(url);
 //	}
 
-	@Then("the title of page is {string}")
-	public void the_title_of_page_is(String expectedTitle) throws InterruptedException {
-		StringBuffer actualTitle = new StringBuffer(fw.getDriverManager().getDriver().getTitle());
-		Assert.assertEquals(expectedTitle, actualTitle.toString());
-	}
+//	@Then("the title of page is {string}")
+//	public void the_title_of_page_is(String expectedTitle) throws InterruptedException {
+//		StringBuffer actualTitle = new StringBuffer(fw.getDriverManager().getDriver().getTitle());
+//		Assert.assertEquals(expectedTitle, actualTitle.toString());
+//	}
 
 	@When("user clicks on {string}")
 	public void user_clicks_on(String service) throws InterruptedException {

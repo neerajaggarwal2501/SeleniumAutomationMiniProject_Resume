@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageobjects.HomePage;
 import pageobjects.LoginPage;
+import pageobjects.dashboard.NOPCommerceNewsPage;
 import pageobjects.promotions.DiscountCreationPage;
 import pageobjects.promotions.DiscountListPage;
 import pageobjects.sales.GiftCardCreationPage;
@@ -20,6 +21,7 @@ public class PageObjectManager {
 	private DiscountListPage discountListPage;
 	private DiscountCreationPage newDiscountPage;
 	private BingHomePage bingHomePage;
+	private NOPCommerceNewsPage nopCommerceNewsPage;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -52,5 +54,8 @@ public class PageObjectManager {
 	public BingHomePage getBingHomePage() {
 		return (bingHomePage == null) ? new BingHomePage(driver) : bingHomePage;
 	}
-
+	
+	public NOPCommerceNewsPage getNOPCommerceNewsPage() {
+		return (nopCommerceNewsPage == null) ? new NOPCommerceNewsPage(driver) : nopCommerceNewsPage;
+	}
 }
