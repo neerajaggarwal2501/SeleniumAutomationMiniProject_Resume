@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = "stepdefinitions", 
 		dryRun = false, 
 		monochrome = true, 
-		plugin = { "pretty", "html:TestReports\\TestReport.html","json:TestReports\\TestReport.json","rerun:TestReports\\TestReport_Retry.txt" },
+		plugin = { "pretty", "html:TestReports\\TestReport.html","json:TestReports\\TestReport.json","rerun:TestReports\\TestReport_FailedTests.txt" },
 		tags = "@Regression or @Smoke"
 		)
 public class TestRunner_Sample {
